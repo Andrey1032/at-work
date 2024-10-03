@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import { publicRoutes } from "./utils/routes";
+import Navbar from "./components/Navbar/Navbar";
+import { USERS_ROUTE } from "./utils/consts";
+
+const router = createBrowserRouter([
+  {
+    path: USERS_ROUTE,
+    element: <Navbar />,
+    errorElement: <div><h2>Страница не существует</h2><Link to={USERS_ROUTE}>Перейти на главную страницу</Link></div>,
+    children: publicRoutes?.map(pubRoute => ({
+      path: pubRoute.path,
+      element: pubRoute.element,
+    }))
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

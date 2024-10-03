@@ -1,0 +1,54 @@
+.navbar {
+    background-color: var(--color-06);
+    width: 100vw;
+    height: 56px;
+    padding: 16px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 376px) {
+        padding: 13px 16px;
+    }
+
+    .logo img {
+        height: 20px;
+    }
+    .regMenu {
+        justify-self: end;
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+        .icons {
+            display: flex;
+            gap: 4px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            @media (max-width: 376px) {
+                display: none;
+            }
+        }
+        .user {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: start;
+            .avatar {
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+            }
+            .name {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                @media (max-width: 376px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
