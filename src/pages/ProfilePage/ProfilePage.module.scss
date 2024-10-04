@@ -84,59 +84,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
-                .input_group {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                    label {
-                        font-size: 18px;
-                        font-weight: 600;
-                        line-height: 24.59px;
-                        color: var(--color-01);
-                    }
-                    .input_field {
-                        position: relative;
-
-                        input {
-                            width: 100%;
-                            height: 42px;
-                            padding-left: 16px;
-                            padding-right: 8px;
-                            border: 2px solid var(--color-04);
-                            border-radius: 50px;
-
-                            font-size: 16px;
-                            font-weight: 500;
-                            line-height: 21.86px;
-                            color: var(--color-01);
-                            &::placeholder {
-                                color: var(--color-03);
-                            }
-                            &:focus {
-                                color: var(--color-02);
-                            }
-                        }
-                        .icon-clear {
-                            position: absolute;
-                            top: 50%;
-                            right: 16px;
-                            transform: translate(7px, -50%);
-                            width: 10px;
-                            height: 10px;
-                            box-sizing: content-box;
-                            padding: 7px;
-                            fill: none;
-                            cursor: pointer;
-                            path {
-                                fill: var(--color-02);
-                            }
-                            display: none;
-                        }
-                        input:focus + .icon-clear {
-                            display: block;
-                        }
-                    }
-                }
             }
             button {
                 cursor: pointer;
