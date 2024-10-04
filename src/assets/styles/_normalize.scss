@@ -55,6 +55,14 @@ svg {
     height: auto;
 }
 
+button {
+    background: none;
+    border: none;
+}
+
 address {
     font-style: normal;
+}
+body {
+    background-color: var(--color-05);
 }

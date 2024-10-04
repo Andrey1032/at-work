@@ -1,0 +1,33 @@
+.list {
+    margin: 40px 140px auto;
+    &.archive {
+        filter: grayscale(100);
+    }
+    .list__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32.78px;
+    }
+    .sep-line {
+        margin-top: 16px;
+        margin-bottom: 28px;
+        color: black;
+        width: 100%;
+        background-color: var(--color-04);
+        height: 1px;
+    }
+    .list__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 350px);
+        row-gap: 32px;
+        column-gap: 40px;
+    }
+
+    @media (max-width: 376px) {
+        margin: 32px 15px auto;
+        .list__cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+}

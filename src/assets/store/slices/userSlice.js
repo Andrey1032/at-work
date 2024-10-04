@@ -1,4 +1,5 @@
 import { asyncThunkCreator, buildCreateSlice } from "@reduxjs/toolkit";
+
 const createSlice = buildCreateSlice({
     creators: { asyncThunk: asyncThunkCreator },
 });
@@ -12,17 +13,14 @@ const userSlice = createSlice({
     name: "user",
     initialState,
     selectors: {
-        selectorUser: (state) => ({
-            name: state.name,
-            avatar_path: state.avatar_path
-        }),
+        selectorUser: (state) => state
     },
     reducers: (create) => ({
     }),
 });
 
-export const {
-} = userSlice.actions;
+// export const {
+// } = userSlice.actions;
 export const {
     selectorUser,
 } = userSlice.selectors;

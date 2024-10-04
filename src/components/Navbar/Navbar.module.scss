@@ -1,6 +1,6 @@
 .navbar {
     background-color: var(--color-06);
-    width: 100vw;
+    width: 100%;
     height: 56px;
     padding: 16px 150px;
     display: flex;
@@ -25,6 +25,15 @@
             svg {
                 width: 24px;
                 height: 24px;
+                cursor: pointer;
+                &.like {
+                    fill: none;
+                    stroke-width: 1.2px;
+                    stroke: var(--color-01);
+                }
+                &.notification {
+                    fill: var(--color-01);
+                }
             }
 
             @media (max-width: 376px) {
@@ -40,12 +49,37 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 50px;
+                @media (max-width: 376px) {
+                    width: 28px;
+                    height: 28px;
+                }
             }
             .name {
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 21.86px;
                 @media (max-width: 376px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .navbar {
+        padding: 11px 16px;
+
+        .regMenu {
+            .icons {
+                display: none;
+            }
+            .user {
+                .avatar {
+                    width: 28px;
+                    height: 28px;
+                }
+                .name {
                     display: none;
                 }
             }

@@ -1,0 +1,107 @@
+@import "../../assets/styles/mixins";
+.card {
+    width: 360px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 24px;
+    background-color: var(--color-06);
+    gap: 20px;
+    border-radius: 16px;
+
+    &__photo {
+        width: 112px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    &__info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .data {
+            .username {
+                position: relative;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 27.32px;
+                color: var(--color-Accent);
+
+                .icon-settings {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(8px, calc(-50% + 2px));
+                    svg {
+                        width: 4px;
+                        height: 16px;
+                        box-sizing: content-box;
+                        padding: 8px;
+                        cursor: pointer;
+                        path {
+                            fill: var(--color-01);
+                        }
+                        &:hover path {
+                            fill: var(--color-Accent);
+                        }
+                        &.active path {
+                            fill: var(--color-02);
+                        }
+                    }
+                }
+            }
+            .company {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 21.86px;
+                color: var(--color-02);
+            }
+        }
+        .city {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.12px;
+            color: var(--color-03);
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .card {
+        grid-template-columns: 1fr;
+        width: 162px;
+        height: 242px;
+        padding: 16px;
+        &__photo {
+            width: 130px;
+        }
+        &__info {
+            .data {
+                .username {
+                    p {
+                        @include ellipsis;
+                        width: 105px;
+                    }
+
+                    font-size: 18px;
+                    .icon-settings {
+                        transform: translate(0, calc(-50% + 2.5px));
+                        svg {
+                            width: 2.5px;
+                            height: 10px;
+                            &:hover path {
+                                fill: var(--color-02);
+                            }
+                        }
+                    }
+                }
+                .company {
+                    font-size: 14px;
+                }
+            }
+            .city {
+                font-size: 10px;
+            }
+        }
+    }
+}
