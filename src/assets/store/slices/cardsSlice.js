@@ -8,6 +8,7 @@ const initialState = {
         active: [],
         archive: [],
     },
+    currentCard: null,
     status: "loading",
 };
 const cardsSlice = createSlice({
@@ -15,9 +16,13 @@ const cardsSlice = createSlice({
     initialState,
     selectors: {
         selectorCards: (state) => state.cards,
-        selectorLoading: (state) => state.status
+        selectorLoading: (state) => state.status,
+        selectorCurrentCard: state => state.currentCard
     },
     reducers: (create) => ({
+        currentCard: create.reducer((state, action) => {
+            state.currentCard = state.cards.active.find(card => card.id === +action.payload)
+        }),
         arhiveCard: create.reducer((state, action) => {
             state.cards.archive.push(state.cards.active.find(card => card.id === action.payload))
             state.cards.active = state.cards.active.filter(card => card.id !== action.payload);
@@ -53,6 +58,7 @@ const cardsSlice = createSlice({
 });
 
 export const {
+    currentCard,
     arhiveCard,
     activeCard,
     fetchUsers
@@ -60,5 +66,6 @@ export const {
 export const {
     selectorCards,
     selectorLoading,
+    selectorCurrentCard,
 } = cardsSlice.selectors;
 export default cardsSlice.reducer;

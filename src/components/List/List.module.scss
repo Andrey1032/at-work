@@ -8,14 +8,6 @@
         font-weight: 600;
         line-height: 32.78px;
     }
-    .sep-line {
-        margin-top: 16px;
-        margin-bottom: 28px;
-        color: black;
-        width: 100%;
-        background-color: var(--color-04);
-        height: 1px;
-    }
     .list__cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, 350px);
@@ -30,4 +22,12 @@
             gap: 20px;
         }
     }
+}
+
+.sep-line {
+    margin-top: 16px;
+    margin-bottom: 28px;
+    width: 100%;
+    background-color: var(--color-04);
+    height: 1px;
 }
