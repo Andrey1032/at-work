@@ -8,7 +8,7 @@ export const publicRoutes = [
         element: <UsersPage />,
     },
     {
-        path: USERS_ROUTE + "/:cards_id",
+        path: USERS_ROUTE + "/:cards_id/:category",
         element: <ProfilePage />,
     },
 ];

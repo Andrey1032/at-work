@@ -24,7 +24,7 @@ export default function Card({ card, type }) {
                 title: "Редактировать",
                 func: () => {
                     dispatch(currentCard(card.id));
-                    navigate(`${card.id}`);
+                    navigate(`${card.id}/0`);
                 },
             },
             {

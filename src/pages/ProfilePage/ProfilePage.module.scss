@@ -1,4 +1,5 @@
 .profile__page {
+    position: relative;
     height: 1100px; // чтобы было удобнее, в макете размер намного больше
     display: flex;
     flex-direction: column;
@@ -7,23 +8,23 @@
         width: max-content;
         display: flex;
         align-items: center;
-        gap: 15px;
         margin: 20.5px 140px;
+        gap: 8px;
         cursor: pointer;
         svg {
-            width: 18px;
-            height: 18px;
+            width: 21px;
+            height: 21px;
             fill: none;
 
             path {
-                stroke: var(--color-01);
+                stroke: var(--color-02);
                 stroke-width: 1.5px;
                 stroke-linecap: round;
                 stroke-linejoin: round;
             }
         }
         &__title {
-            color: var(--color-01);
+            color: var(--color-02);
             font-size: 20px;
             font-weight: 600;
             line-height: 27.32px;
@@ -31,13 +32,12 @@
     }
     .data {
         margin: 0 140px;
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 360px auto;
         gap: 40px;
 
         &__settings {
             display: grid;
-            width: 360px;
             padding: 40px;
             gap: 40px;
             border-radius: 16px;
@@ -67,7 +67,6 @@
         }
 
         &__profile {
-            width: 100%;
             padding: 40px;
             gap: 24px;
             border-radius: 16px;
@@ -92,6 +91,13 @@
                 color: var(--color-06);
                 background-color: var(--color-01);
                 border-radius: 50px;
+
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 21.86px;
+
+                transition: all 0.3s;
+
                 &:hover {
                     color: var(--color-02);
                     background-color: var(--color-05);
@@ -104,6 +110,80 @@
         margin-bottom: 24px;
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .profile__page {
+        gap: 20px;
+        .back {
+            gap: 4px;
+            margin: 13px 16px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            &__title {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 21.86px;
+            }
+        }
+        .data {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            margin: 0 16px;
+            gap: 32px;
+            &__settings {
+                width: 343px;
+                padding: 28px;
+                gap: 24px;
+                .photo {
+                    width: 287px;
+                    height: 187px;
+                }
+                .categories {
+                    width: 287px;
+                    .category {
+                        font-size: 14px;
+                        line-height: 19.12px;
+                        &.active {
+                            font-weight: 500;
+                            color: var(--color-01);
+                        }
+                        &:hover {
+                            color: var(--color-01);
+                        }
+                    }
+                }
+            }
+
+            &__profile {
+                padding: 28px;
+                .inputs {
+                    width: 287px;
+                    gap: 20px;
+                }
+                button {
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 19.12px;
+                    &:hover {
+                        color: var(--color-06);
+                        background-color: var(--color-01);
+                    }
+                }
+                .sep-line {
+                    margin-top: 16px;
+                }
+            }
+        }
+        .sep-line {
+            margin-top: 8px;
+            margin-bottom: 20px;
         }
     }
 }
