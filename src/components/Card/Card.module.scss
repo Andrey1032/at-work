@@ -2,7 +2,7 @@
 .card {
     width: 360px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 112px 180px;
     padding: 24px;
     background-color: var(--color-06);
     gap: 20px;
@@ -26,17 +26,22 @@
                 font-weight: 600;
                 line-height: 27.32px;
                 color: var(--color-Accent);
-
+                p {
+                    width: 160px;
+                    @include ellipsis;
+                }
                 .icon-settings {
                     position: absolute;
                     top: 50%;
                     right: 0;
-                    transform: translate(8px, calc(-50% + 2px));
+                    transform: translate(0, calc(-50%));
+                    width: 24px;
+                    height: 24px;
                     svg {
                         width: 4px;
                         height: 16px;
                         box-sizing: content-box;
-                        padding: 8px;
+                        padding: 4px 10px;
                         cursor: pointer;
                         path {
                             fill: var(--color-01);
@@ -55,6 +60,9 @@
                 font-weight: 500;
                 line-height: 21.86px;
                 color: var(--color-02);
+
+                width: 160px;
+                @include ellipsis;
             }
         }
         .city {
@@ -62,6 +70,9 @@
             font-weight: 500;
             line-height: 19.12px;
             color: var(--color-03);
+
+            width: 160px;
+            @include ellipsis;
         }
     }
 }
@@ -79,7 +90,6 @@
             .data {
                 .username {
                     p {
-                        @include ellipsis;
                         width: 105px;
                     }
 
@@ -97,10 +107,12 @@
                 }
                 .company {
                     font-size: 14px;
+                    width: 105px;
                 }
             }
             .city {
                 font-size: 10px;
+                width: 105px;
             }
         }
     }
