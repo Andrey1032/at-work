@@ -2,7 +2,7 @@
     "name": "at-work",
     "version": "0.1.0",
     "private": true,
-    "homepage": "htttps://Andrey1032.github.io/at-work",
+    "homepage": "htttps://Andrey1032.github.io",
     "dependencies": {
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
         "@reduxjs/toolkit": "^2.2.7",
