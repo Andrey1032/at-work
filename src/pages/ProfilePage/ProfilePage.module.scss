@@ -114,7 +114,7 @@
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 425px) {
     .profile__page {
         gap: 20px;
         .back {
@@ -164,6 +164,128 @@
                 padding: 28px;
                 .inputs {
                     width: 287px;
+                    gap: 20px;
+                }
+                button {
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 19.12px;
+                    &:hover {
+                        color: var(--color-06);
+                        background-color: var(--color-01);
+                    }
+                }
+                .sep-line {
+                    margin-top: 16px;
+                }
+            }
+        }
+        .sep-line {
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 425px) and (max-width: 769px) {
+    .profile__page {
+        gap: 20px;
+        .back {
+            gap: 4px;
+            margin: 13px 16px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            &__title {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 21.86px;
+            }
+        }
+        .data {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            margin: 0 16px;
+            gap: 32px;
+            &__settings {
+                display: flex;
+                width: 100%;
+                padding: 28px;
+                gap: 24px;
+                .photo {
+                    width: 287px;
+                    height: 187px;
+                }
+                .categories {
+                    width: 287px;
+                    .category {
+                        font-size: 14px;
+                        line-height: 19.12px;
+                        &.active {
+                            font-weight: 500;
+                            color: var(--color-01);
+                        }
+                        &:hover {
+                            color: var(--color-01);
+                        }
+                    }
+                }
+            }
+
+            &__profile {
+                padding: 28px;
+                .inputs {
+                    width: 287px;
+                    gap: 20px;
+                }
+                button {
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 19.12px;
+                    &:hover {
+                        color: var(--color-06);
+                        background-color: var(--color-01);
+                    }
+                }
+                .sep-line {
+                    margin-top: 16px;
+                }
+            }
+        }
+        .sep-line {
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .profile__page {
+        gap: 20px;
+        .data {
+            margin: 0 16px;
+            gap: 32px;
+            &__settings {
+                .categories {
+                    .category {
+                        &.active {
+                            font-weight: 500;
+                            color: var(--color-01);
+                        }
+                        &:hover {
+                            color: var(--color-01);
+                        }
+                    }
+                }
+            }
+            &__profile {
+                padding: 28px;
+                .inputs {
+                    width: 100%;
                     gap: 20px;
                 }
                 button {
