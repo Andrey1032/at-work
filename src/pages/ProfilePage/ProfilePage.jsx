@@ -76,7 +76,7 @@ export default function ProfilePage() {
 
     return (
         <div className="profile__page">
-            <button className="back" onClick={() => navigate("/users")}>
+            <button className="back" onClick={() => navigate("/")}>
                 <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.25 9H0.75" />
                     <path d="M6 14.25L0.75 9L6 3.75" />
@@ -88,7 +88,7 @@ export default function ProfilePage() {
                     <img className="photo" src={photo} alt="фото" />
                     <div className="categories">
                         <Link
-                            to={USERS_ROUTE + `/${cards_id}/${0}`}
+                            to={USERS_ROUTE + `${cards_id}/${0}`}
                             className={
                                 +category === 0 ? "category active" : "category"
                             }
@@ -98,7 +98,7 @@ export default function ProfilePage() {
                         <hr className="sep-line" />
 
                         <Link
-                            to={USERS_ROUTE + `/${cards_id}/${1}`}
+                            to={USERS_ROUTE + `${cards_id}/${1}`}
                             className={
                                 +category === 1 ? "category active" : "category"
                             }
@@ -107,7 +107,7 @@ export default function ProfilePage() {
                         </Link>
                         <hr className="sep-line" />
                         <Link
-                            to={USERS_ROUTE + `/${cards_id}/${2}`}
+                            to={USERS_ROUTE + `${cards_id}/${2}`}
                             className={
                                 +category === 2 ? "category active" : "category"
                             }
@@ -117,7 +117,7 @@ export default function ProfilePage() {
                         <hr className="sep-line" />
 
                         <Link
-                            to={USERS_ROUTE + `/${cards_id}/${3}`}
+                            to={USERS_ROUTE + `${cards_id}/${3}`}
                             className={
                                 +category === 3 ? "category active" : "category"
                             }

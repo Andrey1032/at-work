@@ -1,1 +1,1 @@
-export const USERS_ROUTE = "/users"; // список пользователей
+export const USERS_ROUTE = "/"; // список пользователей
