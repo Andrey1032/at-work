@@ -1,3 +1,7 @@
+ТЗ:
+[dec569c3-443b-41d7-a84d-117d9fe043ac.pdf](https://github.com/user-attachments/files/17266159/dec569c3-443b-41d7-a84d-117d9fe043ac.pdf)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
