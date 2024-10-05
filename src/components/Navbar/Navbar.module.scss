@@ -68,3 +68,17 @@
         }
     }
 }
+@media (max-width: 769px) {
+    .navbar {
+        padding: 13px 11px 13px 16px;
+        height: 50px;
+        .regMenu {
+            .user {
+                .avatar {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+    }
+}

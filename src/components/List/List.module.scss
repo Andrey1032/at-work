@@ -22,6 +22,12 @@
             gap: 20px;
         }
     }
+    @media (max-width: 769px) {
+        margin: 32px 15px auto;
+        .list__cards {
+            gap: 20px;
+        }
+    }
 }
 
 .sep-line {
